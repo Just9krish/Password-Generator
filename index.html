@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Password Generator</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <h1 class="container__title">Password Generator</h1>
+        <div class="container__box">
+          <input class="container__box_input" type="text" />
+          <svg
+            class="container__box_icon"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="#b3ffbe"
+              d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7
+            0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256
+            384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6
+            70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838
+            0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0
+            17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16
+            16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16
+            16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3
+            28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"
+            />
+          </svg>
+        </div>
+
+        <form class="form">
+          <div class="form__container">
+            <div class="form__container_box">
+              <p class="form__container_box__info">Character Length</p>
+              <p class="form__container_box__info--color">10</p>
+            </div>
+            <input class="form__input" type="range" />
+            <div class="form__container_box--reverse">
+              <div class="field">
+                <label class="field__label" for="uppercase">
+                  <input
+                    class="field__input"
+                    type="checkbox"
+                    name=""
+                    id="uppercase"
+                  />
+                  Include Uppercase Letters
+                </label>
+                <label class="field__label" for="lowercase">
+                  <input
+                    class="field__input"
+                    type="checkbox"
+                    name=""
+                    id="lowercase"
+                  />
+                  Include Lowercase Letters
+                </label>
+                <label class="field__label" for="numbers">
+                  <input
+                    class="field__input"
+                    type="checkbox"
+                    name=""
+                    id="numbers"
+                  />
+                  Include Numbers
+                </label>
+                <label class="field__label" for="symbols">
+                  <input
+                    class="field__input"
+                    type="checkbox"
+                    name=""
+                    id="symbols"
+                  />
+                  Include Symbols
+                </label>
+              </div>
+
+              <button class="form__btn">
+                Generate
+                <svg class="form__btn_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path fill="#101014"
+                    d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
 </html>
