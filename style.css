@@ -179,7 +179,8 @@ a:not([class]) {
 }
 
 .container {
-  min-width: 450px;
+  max-width: 450px;
+  width: 450px;
   margin: 0 auto;
   min-height: 520px;
   padding: 30px;
@@ -203,17 +204,29 @@ a:not([class]) {
 .container__box_input {
   width: 100%;
   background-color: #24232a;
-  height: 40px;
+  height: 45px;
   outline: none;
   padding-inline: 25px;
   border-radius: 5px;
 }
 
+.container-guard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: transparent;
+}
+
 .container__box_icon {
   position: absolute;
   right: 0;
-  top: 10px;
+  top: 12px;
   height: 18px;
+  cursor: pointer;
+  z-index: 999;
 }
 
 .form {
@@ -255,11 +268,61 @@ a:not([class]) {
   accent-color: #b3ffbe;
 }
 
-.difficulty {
+.strength {
   margin-block: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #0c0c0c;
+  padding: 20px 25px;
+  border-radius: 5px;
+}
+
+.strength__title {
+  font-size: 0.7rem;
+}
+
+.strength__value {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.strength__status {
+  font-size: 0.9rem;
+}
+
+.bars {
+  display: flex;
+  gap: 2px;
+}
+
+.bar-one {
+  border: 1px solid white;
+  width: 0.4rem;
+  height: 1rem;
+  background: transparent;
+}
+
+.bar-two {
+  border: 1px solid white;
+  width: 0.4rem;
+  height: 1rem;
+  background: transparent;
+}
+
+.bar-three {
+  border: 1px solid white;
+  width: 0.4rem;
+  height: 1rem;
+  background: transparent;
+}
+
+.bar-four {
+  border: 1px solid white;
+  width: 0.4rem;
+  height: 1rem;
+  background: transparent;
 }
 
 .form__btn {

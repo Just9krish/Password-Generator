@@ -18,8 +18,9 @@
       <div class="container">
         <h1 class="container__title">Password Generator</h1>
         <div class="container__box">
-          <input class="container__box_input" type="text" />
-          <svg
+          <input aria-label="password" class="container__box_input" type="text" />
+          <div class="container-guard"></div>
+          <svg aria-label="copy to clipboard"
             class="container__box_icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
@@ -94,10 +95,18 @@
                 </label>
               </div>
 
-              <div class="difficulty">
-                <p class="difficulty__text">Strength</p>
-                <p class="difficulty__type">Medium</p>
-              </div>
+              <div class="strength">
+                <p class="strength__title">STRENGTH</p>
+                <div class="strength__value">
+                    <p class="strength__status">Medium</p>
+                    <div class="bars">
+                       <div class="bar-one"></div>
+                       <div class="bar-two"></div>
+                       <div class="bar-three"></div>
+                       <div class="bar-four"></div>
+                    </div>  
+                </div>
+            </div>
 
               <button class="form__btn">
                 Generate

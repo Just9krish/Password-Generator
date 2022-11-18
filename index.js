@@ -2,6 +2,11 @@ const passwordForm = document.querySelector("form");
 const inputRange = document.querySelector("input[type='range']");
 const password = document.querySelector(".container__box_input");
 
+const barOne = document.querySelector(".bar-one");
+const barTwo = document.querySelector(".bar-two");
+const barThree = document.querySelector(".bar-three");
+const barFour = document.querySelector(".bar-four");
+
 passwordForm.addEventListener("change", () => {
   const upperCase = document.querySelector("#uppercase");
   const lowerCase = document.querySelector("#lowercase");
@@ -41,6 +46,16 @@ function generatePassword(str, passLength) {
   }
 
   password.value = generatedPass;
+  changeBarColor(generatedPass)
+}
+
+function changeBarColor(pass) {
+  if (pass.length <= 6) {
+    barOne.style.backgroundColor = "red"
+  } else if (pass.length >= 6 || pass.length <= 9) {
+    barOne.style.backgroundColor = "orange"
+    barTwo.style.backgroundColor = "orange"
+  }
 }
 
 passwordForm.addEventListener("submit", (e) => {
