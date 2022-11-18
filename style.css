@@ -243,17 +243,28 @@ a:not([class]) {
 
 .field__label {
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.field__input {
+  margin-right: 10px;
 }
 
 .field__input:checked {
   accent-color: #b3ffbe;
-  color: #101014;
+}
+
+.difficulty {
+  margin-block: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .form__btn {
   background: none;
   border: none;
-  margin-top: 20px;
   color: #101014;
   background-color: #b3ffbe;
   border-radius: 5px;
@@ -278,5 +289,5 @@ a:not([class]) {
 }
 
 .color {
-    color: #b3ffbe;
+  color: #b3ffbe;
 }

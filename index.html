@@ -43,17 +43,24 @@
           <div class="form__container">
             <div class="form__container_box">
               <p class="form__container_box__info">Character Length</p>
-              <p class="form__container_box__info--color">10</p>
+              <p class="form__container_box__info" id="length"></p>
             </div>
-            <input class="form__input" type="range" />
+            <input
+              class="form__input"
+              value="8"
+              min="6"
+              max="16"
+              type="range"
+            />
             <div class="form__container_box--reverse">
               <div class="field">
                 <label class="field__label" for="uppercase">
                   <input
                     class="field__input"
                     type="checkbox"
-                    name=""
+                    name="uppercase"
                     id="uppercase"
+                    checked
                   />
                   Include Uppercase Letters
                 </label>
@@ -61,8 +68,9 @@
                   <input
                     class="field__input"
                     type="checkbox"
-                    name=""
+                    name="lowercase"
                     id="lowercase"
+                    checked
                   />
                   Include Lowercase Letters
                 </label>
@@ -86,10 +94,20 @@
                 </label>
               </div>
 
+              <div class="difficulty">
+                <p class="difficulty__text">Strength</p>
+                <p class="difficulty__type">Medium</p>
+              </div>
+
               <button class="form__btn">
                 Generate
-                <svg class="form__btn_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                  <path fill="#101014"
+                <svg
+                  class="form__btn_icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    fill="#101014"
                     d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
                   />
                 </svg>
